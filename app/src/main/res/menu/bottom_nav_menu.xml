@@ -1,0 +1,36 @@
+<menu xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    tools:context = "com.example.androidnavigation.MainActivity">
+    <item
+        android:id = "@+id/nav_graph_primary_item"
+        android:title = "primary"
+        android:icon="@mipmap/ic_launcher"
+        android:orderInCategory = "100"
+        />
+    <item
+        android:id = "@+id/nav_graph_chats_item"
+        android:title = "chats"
+        android:icon="@mipmap/ic_launcher"
+        android:orderInCategory = "100"
+        />
+    <item
+        android:id = "@+id/nav_graph_posts_item"
+        android:title = "posts"
+        android:icon="@mipmap/ic_launcher"
+        android:orderInCategory = "100"
+        />
+    <item
+        android:id = "@+id/nav_graph_events_item"
+        android:title = "events"
+        android:icon="@mipmap/ic_launcher"
+        android:orderInCategory = "100"
+        />
+    <item
+        android:id = "@+id/nav_graph_others_item"
+        android:title = "others"
+        android:icon="@mipmap/ic_launcher"
+        android:orderInCategory = "100"
+        />
+
+</menu>

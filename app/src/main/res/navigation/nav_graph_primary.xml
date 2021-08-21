@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_primary_item"
+    app:startDestination="@id/primaryFragment"
+    >
+<!--    <fragment-->
+<!--        android:id="@+id/registrationFragment"-->
+<!--        android:name="danyil.karabinovskyi.studentproject.ui.registration.RegistrationFragment"-->
+<!--        android:label="RegistrationFragment" >-->
+<!--        <action-->
+<!--            android:id="@+id/action_registrationFragment_primary"-->
+<!--            app:destination="@id/primaryFragment"-->
+<!--            app:popUpToInclusive="false"-->
+<!--            app:popUpTo="@+id/primaryFragment"-->
+<!--            app:launchSingleTop="true"/>-->
+<!--    </fragment>-->
+    <fragment
+        android:id="@+id/primaryFragment"
+        android:name="danyil.karabinovskyi.studentproject.ui.primary.PrimaryFragment"
+        android:label="PrimaryFragment">
+        <action
+            android:id="@+id/action_primaryFragment_to_loginFragment3"
+            app:destination="@id/loginFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment3"
+        android:name="danyil.karabinovskyi.studentproject.ui.login.LoginFragment"
+        android:label="LoginFragment" />
+</navigation>

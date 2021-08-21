@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph_chats_item"
+    app:startDestination="@id/primaryFragment2">
+
+    <fragment
+        android:id="@+id/primaryFragment2"
+        android:name="danyil.karabinovskyi.studentproject.ui.primary.PrimaryFragment"
+        android:label="PrimaryFragment" >
+        <action
+            android:id="@+id/action_primaryFragment2_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="danyil.karabinovskyi.studentproject.ui.login.LoginFragment"
+        android:label="LoginFragment" >
+
+    </fragment>
+</navigation>

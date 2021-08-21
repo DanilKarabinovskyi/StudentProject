@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/bottom_nav_graph"
+    app:startDestination="@+id/nav_graph_primary_item">
+
+    <include app:graph="@navigation/nav_graph_primary" />
+    <include app:graph="@navigation/nav_graph_chats" />
+    <include app:graph="@navigation/nav_graph_events" />
+    <include app:graph="@navigation/nav_graph_others" />
+    <include app:graph="@navigation/nav_graph_posts" />
+</navigation>

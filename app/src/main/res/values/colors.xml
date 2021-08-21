@@ -1,10 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBackground">#F9F9F9</color>
+
+    <color name="colorAccent">#446CD6</color>
+
+    <color name="colorDarkBlue">#19175A</color>
+    <color name="colorGray">#E1E1E1</color>
+    <color name="colorVeryDarkBlue">#182546</color>
+
+    <!--    Main colors-->
+    <color name="colorAccentBlue">#446CD6</color>
+    <color name="colorLightGray">#BDBDBD</color>
+    <color name="colorDarkGray">#808080</color>
+    <color name="colorAccentOrange">#FA7125</color>
+    <color name="colorDarkBlueWithPurple">#2F1E6C</color>
+    <color name="colorLightBlue">#4BDAE9</color>
+    <color name="colorDark">#333333</color>
+    <color name="colorVeryLightGray">#F2F2F2</color>
+    <color name="colorLightGreen">#1FDCB2</color>
+
+    <color name="colorRed">#E21E24</color>
+    <color name="colorBackGroundBottomNavigation">#f1f1f1</color>
+
+    <color name="colorPrimaryText">#162345</color>
+    <color name="colorSecondaryText">#80162345</color>
+
+    <color name="colorTransparent">#00FFFFFF</color>
+    <color name="colorVeryDarkGray">#6C6C6C</color>
+    <color name="colorCancelButton"> #F4F4F4</color>
+    <color name="colorCancelText">#808080</color>
 </resources>
