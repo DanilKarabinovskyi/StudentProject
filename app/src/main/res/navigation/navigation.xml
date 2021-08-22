@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation"
-    app:startDestination="@id/registrationFragment"
+    app:startDestination="@id/splashFragment"
     >
     <fragment
         android:id="@+id/registrationFragment"
@@ -26,4 +26,15 @@
         android:name="danyil.karabinovskyi.studentproject.ui.global.GlobalActivity"
         android:label="GlobalActivity"
 />
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="danyil.karabinovskyi.studentproject.ui.splash.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@+id/navigation"
+            app:launchSingleTop="true"/>
+    </fragment>
 </navigation>

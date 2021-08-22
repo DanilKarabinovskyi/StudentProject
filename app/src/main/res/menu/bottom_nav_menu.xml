@@ -4,32 +4,32 @@
     tools:context = "com.example.androidnavigation.MainActivity">
     <item
         android:id = "@+id/nav_graph_primary_item"
-        android:title = "primary"
-        android:icon="@mipmap/ic_launcher"
+        android:title = "Home"
+        android:icon="@drawable/ic_home"
         android:orderInCategory = "100"
         />
     <item
         android:id = "@+id/nav_graph_chats_item"
-        android:title = "chats"
-        android:icon="@mipmap/ic_launcher"
+        android:title = "Chats"
+        android:icon="@drawable/ic_chat"
         android:orderInCategory = "100"
         />
     <item
         android:id = "@+id/nav_graph_posts_item"
-        android:title = "posts"
-        android:icon="@mipmap/ic_launcher"
+        android:title = "Posts"
+        android:icon="@drawable/ic_posts"
         android:orderInCategory = "100"
         />
     <item
         android:id = "@+id/nav_graph_events_item"
-        android:title = "events"
-        android:icon="@mipmap/ic_launcher"
+        android:title = "Events"
+        android:icon="@drawable/ic_event"
         android:orderInCategory = "100"
         />
     <item
         android:id = "@+id/nav_graph_others_item"
-        android:title = "others"
-        android:icon="@mipmap/ic_launcher"
+        android:title = "Others"
+        android:icon="@drawable/ic_other"
         android:orderInCategory = "100"
         />
 

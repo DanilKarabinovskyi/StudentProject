@@ -13,12 +13,12 @@ import dagger.hilt.android.AndroidEntryPoint
 import danyil.karabinovskyi.studentproject.R
 import danyil.karabinovskyi.studentproject.base.BaseState
 import danyil.karabinovskyi.studentproject.base.BaseStateFragment
-import danyil.karabinovskyi.studentproject.databinding.PrimaryFragmentBinding
+import danyil.karabinovskyi.studentproject.databinding.FragmentPrimaryBinding
 import danyil.karabinovskyi.studentproject.utils.setOnClickWithDebounce
 
 @AndroidEntryPoint
-class PrimaryFragment: BaseStateFragment<PrimaryFragmentBinding>() {
-    override val layoutId = R.layout.primary_fragment
+class PrimaryFragment: BaseStateFragment<FragmentPrimaryBinding>() {
+    override val layoutId = R.layout.fragment_primary
 
     val viewModel:PrimaryViewModel by viewModels()
 
