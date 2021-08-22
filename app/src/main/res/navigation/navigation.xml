@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
     app:startDestination="@id/splashFragment"
     >
     <fragment
@@ -8,13 +9,7 @@
         android:name="danyil.karabinovskyi.studentproject.ui.registration.RegistrationFragment"
         android:label="RegistrationFragment" >
         <action
-            android:id="@+id/action_registrationFragment_to_bottom_nav_graph"
-            app:destination="@id/bottom_nav_graph"
-            app:popUpToInclusive="true"
-            app:popUpTo="@+id/navigation"
-            app:launchSingleTop="true"/>
-        <action
-            android:id="@+id/action_registrationFragment_to_globalActivity"
+            android:id="@+id/registration_to_globalActivity"
             app:destination="@id/globalActivity"
             app:popUpToInclusive="true"
             app:popUpTo="@+id/bottom_nav_graph"
@@ -31,10 +26,28 @@
         android:name="danyil.karabinovskyi.studentproject.ui.splash.SplashFragment"
         android:label="SplashFragment" >
         <action
-            android:id="@+id/action_splashFragment_to_registrationFragment"
-            app:destination="@id/registrationFragment"
+            android:id="@+id/splash_to_entrance"
+            app:destination="@id/entranceFragment"
             app:popUpToInclusive="true"
             app:popUpTo="@+id/navigation"
             app:launchSingleTop="true"/>
     </fragment>
+    <fragment
+        android:id="@+id/entranceFragment"
+        android:name="danyil.karabinovskyi.studentproject.ui.entrance.EntranceFragment"
+        android:label="EntranceFragment" >
+        <action
+            android:id="@+id/entrance_to_registration"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/entrance_to_globalActivity"
+            app:destination="@id/globalActivity"
+            app:popUpToInclusive="true"
+            app:popUpTo="@+id/navigation"
+            app:launchSingleTop="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="danyil.karabinovskyi.studentproject.ui.login.LoginFragment"
+        android:label="LoginFragment" />
 </navigation>

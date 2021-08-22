@@ -3,20 +3,33 @@ package danyil.karabinovskyi.studentproject.ui.registration
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.View
 import android.widget.Button
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import dagger.hilt.android.AndroidEntryPoint
 import danyil.karabinovskyi.studentproject.R
+import danyil.karabinovskyi.studentproject.base.BaseStateFragment
+import danyil.karabinovskyi.studentproject.databinding.FragmentEntranceBinding
+import danyil.karabinovskyi.studentproject.databinding.FragmentRegistrationBinding
+import danyil.karabinovskyi.studentproject.ui.entrance.EntranceFragmentDirections
+import danyil.karabinovskyi.studentproject.ui.primary.PrimaryViewModel
+import danyil.karabinovskyi.studentproject.utils.setOnClickWithDebounce
 
-class RegistrationFragment: Fragment(R.layout.fragment_registration) {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        val button = view?.findViewById<Button>(R.id.button)
-//        findNavController().navigate(R.id.action_registrationFragment_to_nav_graph_primary)
+@AndroidEntryPoint
+class RegistrationFragment : BaseStateFragment<FragmentRegistrationBinding>() {
 
-        Handler(Looper.getMainLooper()).postDelayed({
-            findNavController().navigate(RegistrationFragmentDirections.actionRegistrationFragmentToGlobalActivity())
+    override val layoutId = R.layout.fragment_registration
+
+    val viewModel: PrimaryViewModel by viewModels()
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.button.setOnClickWithDebounce {
+            findNavController().navigate(RegistrationFragmentDirections.registrationToGlobalActivity())
             requireActivity().finish()
-        }, 2000)
+        }
     }
 }

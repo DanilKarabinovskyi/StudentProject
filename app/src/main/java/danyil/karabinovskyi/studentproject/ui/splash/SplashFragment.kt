@@ -36,12 +36,12 @@ class SplashFragment: BaseStateFragment<FragmentSplashBinding>() {
             0.5f
         )
 
-        fadeIn.duration = 2000
+        fadeIn.duration = 1500
         fadeIn.fillAfter = true
 
         binding.splashImage.animation = fadeIn
         Handler(Looper.getMainLooper()).postDelayed({
-            findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToRegistrationFragment())
+            findNavController().navigate(SplashFragmentDirections.splashToEntrance())
         }, 2000)
     }
 

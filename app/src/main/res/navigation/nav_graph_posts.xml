@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph_posts_item"
-    app:startDestination="@id/primaryFragment5">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_posts_item"
+    app:startDestination="@id/postsFragment">
 
     <fragment
-        android:id="@+id/primaryFragment5"
-        android:name="danyil.karabinovskyi.studentproject.ui.primary.PrimaryFragment"
-        android:label="PrimaryFragment" />
+        android:id="@+id/postsFragment"
+        android:name="danyil.karabinovskyi.studentproject.ui.posts.PostsFragment"
+        android:label="@string/posts" />
 </navigation>

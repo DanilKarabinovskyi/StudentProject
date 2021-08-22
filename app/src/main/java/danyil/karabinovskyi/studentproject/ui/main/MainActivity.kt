@@ -36,7 +36,13 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
 
         // Setup the ActionBar with navController and 3 top level destinations
         appBarConfiguration = AppBarConfiguration(
-            setOf(R.id.primaryFragment, R.id.primaryFragment2,  R.id.primaryFragment3,R.id.primaryFragment5,R.id.loginFragment2)
+            setOf(
+                R.id.primaryFragment,
+                R.id.chatsFragment,
+                R.id.postsFragment,
+                R.id.eventsFragment,
+                R.id.otherFragment
+            )
         )
         val toolbar = binding.toolbar
         setSupportActionBar(toolbar)

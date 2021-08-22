@@ -26,7 +26,7 @@ class PrimaryFragment: BaseStateFragment<FragmentPrimaryBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.button2.setOnClickWithDebounce {
-            findNavController()?.navigate(R.id.action_primaryFragment_to_loginFragment3)
+            findNavController()?.navigate(R.id.primary_to_login)
         }
     }
 

@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph_others_item"
-    app:startDestination="@id/loginFragment2">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_others_item"
+    app:startDestination="@id/otherFragment">
     <fragment
-        android:id="@+id/loginFragment2"
-        android:name="danyil.karabinovskyi.studentproject.ui.login.LoginFragment"
-        android:label="LoginFragment" >
-        <action
-            android:id="@+id/action_loginFragment2_to_primaryFragment4"
-            app:destination="@id/primaryFragment4" />
-    </fragment>
-    <fragment
-        android:id="@+id/primaryFragment4"
-        android:name="danyil.karabinovskyi.studentproject.ui.primary.PrimaryFragment"
-        android:label="PrimaryFragment" />
+        android:id="@+id/otherFragment"
+        android:name="danyil.karabinovskyi.studentproject.ui.other.OtherFragment"
+        android:label="@string/other" />
 </navigation>

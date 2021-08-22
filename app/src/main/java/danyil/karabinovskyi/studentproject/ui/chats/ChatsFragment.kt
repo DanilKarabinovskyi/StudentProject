@@ -1,4 +1,4 @@
-package danyil.karabinovskyi.studentproject.ui.login
+package danyil.karabinovskyi.studentproject.ui.chats
 
 import android.os.Bundle
 import android.view.View
@@ -7,21 +7,18 @@ import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import danyil.karabinovskyi.studentproject.R
 import danyil.karabinovskyi.studentproject.base.BaseStateFragment
+import danyil.karabinovskyi.studentproject.databinding.FragmentChatsBinding
 import danyil.karabinovskyi.studentproject.databinding.FragmentLoginBinding
 import danyil.karabinovskyi.studentproject.ui.primary.PrimaryViewModel
 import danyil.karabinovskyi.studentproject.utils.setOnClickWithDebounce
 
 @AndroidEntryPoint
-class LoginFragment : BaseStateFragment<FragmentLoginBinding>() {
+class ChatsFragment : BaseStateFragment<FragmentChatsBinding>() {
 
-    override val layoutId = R.layout.fragment_login
+    override val layoutId = R.layout.fragment_chats
 
-    val viewModel: PrimaryViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.button3.setOnClickWithDebounce {
-//            findNavController().navigate(R.id.action_loginFragment2_to_primaryFragment4)
-        }
     }
 }
