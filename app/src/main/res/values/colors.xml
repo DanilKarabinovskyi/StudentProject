@@ -32,4 +32,9 @@
     <color name="colorVeryDarkGray">#6C6C6C</color>
     <color name="colorCancelButton"> #F4F4F4</color>
     <color name="colorCancelText">#808080</color>
+
+    <color name="colorPink">#CF4BF8</color>
+    <color name="colorViolet">#8813E4</color>
+    <color name="colorBlue"> #3D93D9</color>
+    <color name="colorGreenLight">#5FF0F7</color>
 </resources>

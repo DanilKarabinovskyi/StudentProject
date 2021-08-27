@@ -10,7 +10,9 @@
         android:roundIcon="@mipmap/ic_education_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.StudentProject">
-        <activity android:name=".ui.main.MainActivity">
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:windowSoftInputMode="stateVisible|adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

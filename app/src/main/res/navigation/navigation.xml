@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/splashFragment"
-    >
+    app:startDestination="@id/splashFragment">
     <fragment
         android:id="@+id/registrationFragment"
         android:name="danyil.karabinovskyi.studentproject.ui.registration.RegistrationFragment"
-        android:label="RegistrationFragment" >
+        android:label="RegistrationFragment"
+        tools:layout="@layout/fragment_registration">
         <action
             android:id="@+id/registration_to_globalActivity"
             app:destination="@id/globalActivity"
             app:popUpToInclusive="true"
             app:popUpTo="@+id/bottom_nav_graph"
             app:launchSingleTop="true"/>
+        <action
+            android:id="@+id/registration_to_login"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left"/>
     </fragment>
     <include app:graph="@navigation/bottom_nav_graph" />
     <activity
@@ -24,7 +32,8 @@
     <fragment
         android:id="@+id/splashFragment"
         android:name="danyil.karabinovskyi.studentproject.ui.splash.SplashFragment"
-        android:label="SplashFragment" >
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash">
         <action
             android:id="@+id/splash_to_entrance"
             app:destination="@id/entranceFragment"
@@ -35,7 +44,8 @@
     <fragment
         android:id="@+id/entranceFragment"
         android:name="danyil.karabinovskyi.studentproject.ui.entrance.EntranceFragment"
-        android:label="EntranceFragment" >
+        android:label="EntranceFragment"
+        tools:layout="@layout/fragment_entrance">
         <action
             android:id="@+id/entrance_to_registration"
             app:destination="@id/registrationFragment" />
@@ -45,9 +55,24 @@
             app:popUpToInclusive="true"
             app:popUpTo="@+id/navigation"
             app:launchSingleTop="true"/>
+        <action
+            android:id="@+id/entrance_to_login"
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="danyil.karabinovskyi.studentproject.ui.login.LoginFragment"
-        android:label="LoginFragment" />
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/login_to_globalActivity"
+            app:destination="@id/globalActivity" />
+        <action
+            android:id="@+id/login_to_registration"
+            app:destination="@id/registrationFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left"/>
+    </fragment>
 </navigation>

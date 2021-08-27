@@ -25,6 +25,7 @@ class PrimaryFragment: BaseStateFragment<FragmentPrimaryBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+//        hideKeyboard(requireActivity())
         binding.button2.setOnClickWithDebounce {
             findNavController()?.navigate(R.id.primary_to_login)
         }

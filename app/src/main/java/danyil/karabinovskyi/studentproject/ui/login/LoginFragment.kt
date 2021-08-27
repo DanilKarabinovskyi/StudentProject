@@ -2,6 +2,7 @@ package danyil.karabinovskyi.studentproject.ui.login
 
 import android.os.Bundle
 import android.view.View
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
@@ -20,8 +21,25 @@ class LoginFragment : BaseStateFragment<FragmentLoginBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.button3.setOnClickWithDebounce {
-//            findNavController().navigate(R.id.action_loginFragment2_to_primaryFragment4)
+
+        setupUI()
+        initListeners()
+    }
+
+    private fun setupUI(){
+        binding.cardView.foreground = ContextCompat.getDrawable(requireActivity(), R.drawable.shape_left_panel);
+    }
+    private fun initListeners(){
+        binding.loginButton.setOnClickWithDebounce {
+            findNavController().navigate(LoginFragmentDirections.loginToGlobalActivity())
+            requireActivity().finish()
+        }
+        binding.signUpText.setOnClickWithDebounce {
+            findNavController().navigate(LoginFragmentDirections.loginToRegistration())
+        }
+
+        binding.signUpTop.setOnClickWithDebounce {
+            findNavController().navigate(LoginFragmentDirections.loginToRegistration())
         }
     }
 }

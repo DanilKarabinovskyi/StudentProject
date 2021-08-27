@@ -22,6 +22,7 @@ import danyil.karabinovskyi.studentproject.utils.visible
 class GlobalActivity : BaseBindingActivity<ActivityGlobalBinding>() {
 
     override val layoutId = R.layout.activity_global
+
     private lateinit var bottomNavigationView: BottomNavigationView
     private lateinit var navController: NavController
     private lateinit var appBarConfiguration: AppBarConfiguration
@@ -29,19 +30,16 @@ class GlobalActivity : BaseBindingActivity<ActivityGlobalBinding>() {
     var inStartOfNavStack = false
     var doubleBackToExitPressedOnce = false
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val navHostFragment = supportFragmentManager.findFragmentById(
             R.id.global_nav_host_container
         ) as NavHostFragment
         navController = navHostFragment.navController
-        // Setup the bottom navigation view with navController
 
         bottomNavigationView = binding.bottomNavView
         bottomNavigationView.setupWithNavController(navController)
 
-        // Setup the ActionBar with navController and 3 top level destinations
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.primaryFragment,
@@ -51,9 +49,11 @@ class GlobalActivity : BaseBindingActivity<ActivityGlobalBinding>() {
                 R.id.otherFragment
             )
         )
+
         val toolbar = binding.toolbar
         setSupportActionBar(toolbar)
         toolbar.setupWithNavController(navController, appBarConfiguration)
+
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
                 R.id.primaryFragment -> {
@@ -79,8 +79,6 @@ class GlobalActivity : BaseBindingActivity<ActivityGlobalBinding>() {
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
-
-
 
     override fun onBackPressed() {
         if(inStartOfNavStack){

@@ -22,14 +22,15 @@ class EntranceFragment : BaseStateFragment<FragmentEntranceBinding>() {
 
         setupAnimations()
         initListeners()
+        setupUI()
     }
 
-    fun initListeners(){
+    private fun initListeners(){
         binding.professorCardView.setOnClickWithDebounce {
             findNavController().navigate(EntranceFragmentDirections.entranceToRegistration())
         }
         binding.studentCardView.setOnClickWithDebounce {
-            findNavController().navigate(EntranceFragmentDirections.entranceToRegistration())
+            findNavController().navigate(EntranceFragmentDirections.entranceToLogin())
         }
         binding.anonymousCardView.setOnClickWithDebounce {
             findNavController().navigate(EntranceFragmentDirections.entranceToGlobalActivity())
@@ -37,7 +38,7 @@ class EntranceFragment : BaseStateFragment<FragmentEntranceBinding>() {
         }
     }
 
-    fun setupAnimations(){
+    private fun setupAnimations(){
         binding.anonymousCardView.translationX = 800F
         binding.studentCardView.translationX = 800F
         binding.professorCardView.translationX = 800F
@@ -54,5 +55,9 @@ class EntranceFragment : BaseStateFragment<FragmentEntranceBinding>() {
 
         binding.anonymousCardView.animate()
             .translationX(0F).alpha(1F).setDuration(600).setStartDelay(400).start()
+    }
+
+    private fun setupUI(){
+        hideKeyboard(requireActivity())
     }
 }
