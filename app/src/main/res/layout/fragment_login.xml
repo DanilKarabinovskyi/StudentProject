@@ -61,14 +61,15 @@
         app:layout_constraintEnd_toEndOf="@+id/login_form" />
 
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="18dp"
         android:text="@string/login"
         android:textColor="@color/colorWhite"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="12dp"
         android:textSize="20sp"
-        android:elevation="18dp"
         app:layout_constraintBottom_toTopOf="@+id/login_form"
         app:layout_constraintStart_toStartOf="@+id/login_form" />
     <com.google.android.material.card.MaterialCardView
@@ -187,7 +188,18 @@
             android:textSize="20sp" />
     </LinearLayout>
 
-
+    <com.tuyenmonkey.mkloader.MKLoader
+        android:id="@+id/loader"
+        android:layout_width="74dp"
+        android:layout_height="67dp"
+        android:elevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        app:mk_color="@color/colorBlue"
+        app:mk_type="Whirlpool" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

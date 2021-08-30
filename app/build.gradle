@@ -40,6 +40,43 @@ android {
     kapt {
         correctErrorTypes true
     }
+
+    signingConfigs {
+        release {
+            storeFile file("studKey.jks")
+            storePassword "studKey"
+            keyAlias "studKey"
+            keyPassword "studKey"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            signingConfig signingConfigs.debug
+        }
+    }
+    flavorDimensions "type"
+
+    productFlavors {
+        dev {
+            dimension "type"
+            applicationId "danyil.karabinovskyi.studentproject"
+            buildConfigField "String", "API_ENDPOINT", "\"http://3.67.99.250/v1/\""
+            versionNameSuffix "-dev"
+        }
+
+        prod {
+            dimension "type"
+            applicationId "danyil.karabinovskyi.studentproject"
+            buildConfigField "String", "API_ENDPOINT", "\"http://3.67.99.250/v1/\""
+
+        }
+    }
 }
 
 dependencies {
@@ -92,6 +129,9 @@ dependencies {
     // Activity KTX for viewModels()
     implementation "androidx.activity:activity-ktx:$activity_ktx_version"
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version")
+
+    //loader
+    compile 'com.tuyenmonkey:mkloader:1.4.0'
 
 
 }
