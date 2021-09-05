@@ -6,7 +6,10 @@ import android.os.SystemClock
 import android.util.TypedValue
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import androidx.annotation.DrawableRes
 import androidx.core.view.children
+import com.bumptech.glide.Glide
 
 fun View.visible() {
     visibility = View.VISIBLE
@@ -80,4 +83,10 @@ fun View.addRipple() = with(TypedValue()) {
 fun View.addCircleRipple() = with(TypedValue()) {
     context.theme.resolveAttribute(R.attr.selectableItemBackgroundBorderless, this, true)
     setBackgroundResource(resourceId)
+}
+
+fun ImageView.displayImage(photoUrl: String) {
+    Glide.with(context)
+            .load(photoUrl)
+            .into(this)
 }

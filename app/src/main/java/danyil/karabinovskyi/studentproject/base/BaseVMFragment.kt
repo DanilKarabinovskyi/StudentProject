@@ -3,8 +3,6 @@ package danyil.karabinovskyi.studentproject.base
 import android.os.Bundle
 import android.view.View
 import androidx.databinding.ViewDataBinding
-import androidx.lifecycle.Observer
-import kotlin.reflect.KClass
 
 abstract class BaseVMFragment<B : ViewDataBinding> :
     BaseBindingFragment<B>() {

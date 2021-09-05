@@ -6,5 +6,13 @@
     <fragment
         android:id="@+id/otherFragment"
         android:name="danyil.karabinovskyi.studentproject.ui.other.OtherFragment"
-        android:label="@string/other" />
+        android:label="@string/other" >
+        <action
+            android:id="@+id/other_to_preferences"
+            app:destination="@id/preferencesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/preferencesFragment"
+        android:name="danyil.karabinovskyi.studentproject.ui.preferences.PreferencesFragment"
+        android:label="PreferencesFragment" />
 </navigation>

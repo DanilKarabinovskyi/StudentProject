@@ -19,4 +19,8 @@
     <string name="forgot_password">Forgot password?</string>
     <string name="name">Name</string>
     <string name="your_university">Your University</string>
+    <string name="save">Save</string>
+    <string name="choose_preferences">Choose your preferences</string>
+
+
 </resources>

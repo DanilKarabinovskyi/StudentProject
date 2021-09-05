@@ -12,7 +12,6 @@ import dagger.hilt.android.AndroidEntryPoint
 import danyil.karabinovskyi.studentproject.R
 import danyil.karabinovskyi.studentproject.base.BaseStateFragment
 import danyil.karabinovskyi.studentproject.databinding.FragmentRegistrationBinding
-import danyil.karabinovskyi.studentproject.ui.login.LoginFragmentDirections
 import danyil.karabinovskyi.studentproject.ui.primary.PrimaryViewModel
 import danyil.karabinovskyi.studentproject.utils.setOnClickWithDebounce
 
@@ -68,7 +67,7 @@ class RegistrationFragment : BaseStateFragment<FragmentRegistrationBinding>() {
             requireActivity().finish()
         }
         binding.login.setOnClickWithDebounce {
-            findNavController().navigateUp()
+            findNavController().navigate(RegistrationFragmentDirections.registrationToLogin())
         }
     }
 }

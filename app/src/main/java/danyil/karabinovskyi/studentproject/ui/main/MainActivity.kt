@@ -3,15 +3,15 @@ package danyil.karabinovskyi.studentproject.ui.main
 import android.os.Bundle
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.*
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.navigateUp
+import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 import danyil.karabinovskyi.studentproject.R
 import danyil.karabinovskyi.studentproject.base.BaseBindingActivity
 import danyil.karabinovskyi.studentproject.databinding.ActivityMainBinding
-import danyil.karabinovskyi.studentproject.utils.gone
 import danyil.karabinovskyi.studentproject.utils.visible
 
 @AndroidEntryPoint

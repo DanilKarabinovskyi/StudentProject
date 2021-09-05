@@ -38,11 +38,14 @@
             android:id="@+id/bottom_nav_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
+            android:background="@color/colorBlue"
             app:elevation="0dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:itemRippleColor="@color/colorGray"
+            app:itemTextColor="@color/colorBlack"
+            app:itemIconTint="@color/colorBlack"
             app:menu="@menu/bottom_nav_menu" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

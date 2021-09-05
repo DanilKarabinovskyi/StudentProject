@@ -2,13 +2,11 @@ package danyil.karabinovskyi.studentproject.ui.entrance
 
 import android.os.Bundle
 import android.view.View
-import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import danyil.karabinovskyi.studentproject.R
 import danyil.karabinovskyi.studentproject.base.BaseStateFragment
 import danyil.karabinovskyi.studentproject.databinding.FragmentEntranceBinding
-import danyil.karabinovskyi.studentproject.ui.primary.PrimaryViewModel
 import danyil.karabinovskyi.studentproject.utils.setOnClickWithDebounce
 
 @AndroidEntryPoint

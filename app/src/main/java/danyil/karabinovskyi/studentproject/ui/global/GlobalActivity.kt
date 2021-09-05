@@ -63,10 +63,6 @@ class GlobalActivity : BaseBindingActivity<ActivityGlobalBinding>() {
                     bottomNavigationView.selectedItemId = R.id.nav_graph_primary_item
 
                 }
-                R.id.loginFragment3 -> {
-                    inStartOfNavStack = false
-                    toolbar.visible()
-                }
                 else -> {
                     inStartOfNavStack = false
                     toolbar.visible()

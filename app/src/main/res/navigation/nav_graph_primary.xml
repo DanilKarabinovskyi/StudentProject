@@ -7,12 +7,5 @@
         android:id="@+id/primaryFragment"
         android:name="danyil.karabinovskyi.studentproject.ui.primary.PrimaryFragment"
         android:label="@string/home">
-        <action
-            android:id="@+id/primary_to_login"
-            app:destination="@id/loginFragment3" />
     </fragment>
-    <fragment
-        android:id="@+id/loginFragment3"
-        android:name="danyil.karabinovskyi.studentproject.ui.login.LoginFragment"
-        android:label="LoginFragment" />
 </navigation>

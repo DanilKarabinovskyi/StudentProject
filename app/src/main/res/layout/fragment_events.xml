@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorLightSkyBlue">
     <com.tuyenmonkey.mkloader.MKLoader
         android:id="@+id/loader"
         android:layout_width="74dp"
@@ -18,5 +19,6 @@
         app:layout_constraintVertical_bias="0.3"
         app:mk_color="@color/colorBlue"
         app:mk_type="Whirlpool" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

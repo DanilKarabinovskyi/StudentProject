@@ -18,10 +18,10 @@
         <action
             android:id="@+id/registration_to_login"
             app:destination="@id/loginFragment"
-            app:enterAnim="@anim/from_left"
-            app:exitAnim="@anim/to_right"
-            app:popEnterAnim="@anim/from_right"
-            app:popExitAnim="@anim/to_left"/>
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
     </fragment>
     <include app:graph="@navigation/bottom_nav_graph" />
     <activity
