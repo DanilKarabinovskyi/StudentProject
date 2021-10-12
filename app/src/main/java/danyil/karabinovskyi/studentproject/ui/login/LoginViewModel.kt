@@ -1,5 +1,6 @@
 package danyil.karabinovskyi.studentproject.ui.login
 
+import dagger.hilt.android.lifecycle.HiltViewModel
 import danyil.karabinovskyi.studentproject.base.BaseStateViewModel
 import danyil.karabinovskyi.studentproject.base.WrappedResponse
 import danyil.karabinovskyi.studentproject.domain.login.entity.LoginEntity
@@ -7,6 +8,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import javax.inject.Inject
 
+@HiltViewModel
 class LoginViewModel@Inject constructor(): BaseStateViewModel() {
     private val state = MutableStateFlow<LoginState>(LoginState.Init)
     val mState: StateFlow<LoginState> get() = state

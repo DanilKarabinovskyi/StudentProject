@@ -66,14 +66,14 @@ android {
         dev {
             dimension "type"
             applicationId "danyil.karabinovskyi.studentproject"
-            buildConfigField "String", "API_ENDPOINT", "\"http://3.67.99.250/v1/\""
+            buildConfigField "String", "API_ENDPOINT", "\"https://backend-students-hub.herokuapp.com/\""
             versionNameSuffix "-dev"
         }
 
         prod {
             dimension "type"
             applicationId "danyil.karabinovskyi.studentproject"
-            buildConfigField "String", "API_ENDPOINT", "\"http://3.67.99.250/v1/\""
+            buildConfigField "String", "API_ENDPOINT", "\"https://backend-students-hub.herokuapp.com/\""
 
         }
     }

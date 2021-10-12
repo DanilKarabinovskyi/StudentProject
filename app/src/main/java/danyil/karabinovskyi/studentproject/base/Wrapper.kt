@@ -16,13 +16,16 @@ data class WrappedListResponse<T> (
 
 
 data class WrappedResponse<T> (
-    var code: Int,
+    @SerializedName("statusCode")
+    var statusCode : Int,
+    @SerializedName("code")
+    var code: String,
     @SerializedName("message")
     var message : String,
     @SerializedName("status")
     var status : Boolean,
-    @SerializedName("errors")
-    var errors : List<String>? = null,
+    @SerializedName("error")
+    var errors : String = "",
     @SerializedName("data")
     var data : T? = null
 )

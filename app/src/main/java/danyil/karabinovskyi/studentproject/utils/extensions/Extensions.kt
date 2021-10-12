@@ -2,11 +2,14 @@ package danyil.karabinovskyi.studentproject.utils
 
 import android.R
 import android.animation.LayoutTransition
+import android.content.Context
 import android.os.SystemClock
 import android.util.TypedValue
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.annotation.DrawableRes
 import androidx.core.view.children
 import com.bumptech.glide.Glide
@@ -90,3 +93,11 @@ fun ImageView.displayImage(photoUrl: String) {
             .load(photoUrl)
             .into(this)
 }
+
+fun View.hideKeyboard() {
+    val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+    imm.hideSoftInputFromWindow(windowToken, 0)
+}
+
+fun Context.toast(message: CharSequence) =
+    Toast.makeText(this, message, Toast.LENGTH_SHORT).show()

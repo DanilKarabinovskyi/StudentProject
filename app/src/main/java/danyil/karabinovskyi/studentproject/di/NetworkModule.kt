@@ -9,6 +9,7 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import danyil.karabinovskyi.studentproject.core.App
 import danyil.karabinovskyi.studentproject.utils.Constants
+import danyil.karabinovskyi.studentproject.utils.SharedPrefs
 import okhttp3.Cache
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -32,15 +33,17 @@ object NetworkModule {
     @Provides
     @Singleton
     fun provideRetrofit(client: OkHttpClient): Retrofit {
-        return Retrofit.Builder().baseUrl(Constants.BASE_URL).client(client)
-            .addConverterFactory(GsonConverterFactory.create(GsonBuilder().create()))
+        return Retrofit.Builder()
+            .baseUrl(Constants.BASE_URL)
+            .client(client)
+            .addConverterFactory(GsonConverterFactory.create(GsonBuilder().setLenient().create()))
             .build()
     }
 
     private val READ_TIMEOUT = 30
     private val WRITE_TIMEOUT = 30
     private val CONNECTION_TIMEOUT = 10
-    private val CACHE_SIZE_BYTES = 10 * 1024 * 1024L // 10 MB
+    private val CACHE_SIZE_BYTES = 10 * 1024 * 1024L
 
     @Provides
     @Singleton
@@ -48,27 +51,19 @@ object NetworkModule {
         headerInterceptor: RequestInterceptor,
         cache: Cache
     ): OkHttpClient {
-
         val okHttpClientBuilder = OkHttpClient().newBuilder()
         okHttpClientBuilder.connectTimeout(CONNECTION_TIMEOUT.toLong(), TimeUnit.SECONDS)
         okHttpClientBuilder.readTimeout(READ_TIMEOUT.toLong(), TimeUnit.SECONDS)
         okHttpClientBuilder.writeTimeout(WRITE_TIMEOUT.toLong(), TimeUnit.SECONDS)
         okHttpClientBuilder.cache(cache)
         okHttpClientBuilder.addInterceptor(headerInterceptor)
-
-
         return okHttpClientBuilder.build()
     }
 
 
     @Provides
-    @Singleton
-    fun provideHeaderInterceptor(): Interceptor {
-        return Interceptor {
-            val requestBuilder = it.request().newBuilder()
-            //hear you can add all headers you want by calling 'requestBuilder.addHeader(name ,  value)'
-            it.proceed(requestBuilder.build())
-        }
+    fun provideRequestInterceptor(prefs: SharedPrefs) : RequestInterceptor {
+        return RequestInterceptor(prefs)
     }
 
 
