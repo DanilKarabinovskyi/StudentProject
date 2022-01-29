@@ -20,17 +20,17 @@ import javax.inject.Inject
 class SplashRepositoryImpl @Inject constructor(private val splashApi: SplashApi) : SplashRepository {
     override suspend fun verify(verifyRequest: VerifyRequest): Flow<Result<VerifyEntity, WrappedResponse<VerifyEntity>>>{
         return flow {
-            val response = registrationApi.register(registrationRequest)
-            if (response.isSuccessful){
-                val body = response.body()!!
-                val registerEntity = RegistrationEntity(token = body.token?:"")
-                emit(Result.Success(registerEntity))
-            }else{
-                val type = object : TypeToken<WrappedResponse<RegistrationResponse>>(){}.type
-                val err : WrappedResponse<RegistrationEntity> = Gson().fromJson(response.errorBody()!!.charStream(), type)
-                err.code = response.code().toString()
-                emit(Result.Error(err))
-            }
+//            val response = registrationApi.register(registrationRequest)
+//            if (response.isSuccessful){
+//                val body = response.body()!!
+//                val registerEntity = RegistrationEntity(token = body.token?:"")
+//                emit(Result.Success(registerEntity))
+//            }else{
+//                val type = object : TypeToken<WrappedResponse<RegistrationResponse>>(){}.type
+//                val err : WrappedResponse<RegistrationEntity> = Gson().fromJson(response.errorBody()!!.charStream(), type)
+//                err.code = response.code().toString()
+//                emit(Result.Error(err))
+//            }
         }
     }
 }

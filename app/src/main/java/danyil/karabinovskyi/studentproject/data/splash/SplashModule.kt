@@ -19,8 +19,8 @@ import javax.inject.Singleton
 class SplashModule {
     @Singleton
     @Provides
-    fun provideSplashApi(retrofit: Retrofit) : RegistrationApi {
-        return retrofit.create(RegistrationApi::class.java)
+    fun provideSplashApi(retrofit: Retrofit) : SplashApi {
+        return retrofit.create(SplashApi::class.java)
     }
 
     @Singleton

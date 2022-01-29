@@ -7,6 +7,6 @@ import retrofit2.http.Body
 import retrofit2.http.POST
 
 interface SplashApi {
-    @POST("auth/verify")
-    suspend fun register(@Body registerRequest: RegistrationRequest) : Response<VerifyResponse>
+//    @POST("auth/verify")
+//    suspend fun register(@Body registerRequest: RegistrationRequest) : Response<VerifyResponse>
 }

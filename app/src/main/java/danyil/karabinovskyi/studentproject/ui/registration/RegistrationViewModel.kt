@@ -3,11 +3,8 @@ package danyil.karabinovskyi.studentproject.ui.registration
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import danyil.karabinovskyi.studentproject.base.BaseStateViewModel
 import danyil.karabinovskyi.studentproject.base.Result
 import danyil.karabinovskyi.studentproject.base.WrappedResponse
-import danyil.karabinovskyi.studentproject.data.registration.remote.dto.RegistrationResponse
-import danyil.karabinovskyi.studentproject.domain.login.entity.LoginEntity
 import danyil.karabinovskyi.studentproject.domain.registration.entity.RegistrationEntity
 import danyil.karabinovskyi.studentproject.domain.registration.requests.RegistrationRequest
 import danyil.karabinovskyi.studentproject.domain.registration.usecase.RegistrationUseCase
